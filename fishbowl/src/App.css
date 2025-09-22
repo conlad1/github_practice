@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background: radial-gradient(circle at center, #222, #111);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.app-container {
+  text-align: center;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffcc00;
+  text-shadow: 0 0 8px #ff8800, 0 0 15px #ffcc00;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.fishbowl {
+  width: 500px;
+  height: 250px;
+  border-radius: 50% / 40%;
+  background: radial-gradient(circle at center, #00bfff, #006994);
+  border: 8px solid #ccc;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 0 20px #00bfff, inset 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.fish {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1); /* start facing right */
+  animation: swimBackAndForth 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px gold);
+  cursor: pointer;
+}
+
+.fish.paused {
+  animation-play-state: paused;
+}
+
+@keyframes swimBackAndForth {
+  0% {
+    left: 0;
+    transform: translateY(-50%) scaleX(-1); /* face right at start */
+  }
+  49% {
+    left: calc(100% - 2rem);
+    transform: translateY(-50%) scaleX(-1); /* still facing right */
+  }
+  50% {
+    left: calc(100% - 2rem);
+    transform: translateY(-50%) scaleX(1); /* flip to face left */
+  }
+  100% {
+    left: 0;
+    transform: translateY(-50%) scaleX(1); /* swim left */
+  }
+}
+
+.controls button {
+  margin: 0.3rem;
+  padding: 0.6rem 1rem;
+  background: #444;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  color: #ffcc00;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.controls button:hover {
+  background: #666;
+  transform: scale(1.05);
+}
