@@ -6,7 +6,7 @@
   border: 8px solid #ccc;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 20px #00bfff, inset 0 0 20px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px #00bfff, inset 0 0 20px rgba(218, 111, 111, 0.4);
   margin: 2rem auto;
 }
 
