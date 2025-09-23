@@ -8,6 +8,9 @@
   overflow: hidden;
   box-shadow: 0 0 20px #00bfff, inset 0 0 20px rgba(218, 111, 111, 0.4);
   margin: 2rem auto;
+
+    /* ✨ New simple shine effect */
+  background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), transparent 70%);
 }
 
 .fish-path {
